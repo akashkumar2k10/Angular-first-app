@@ -4,6 +4,6 @@
 
 <table border="2">
     <tr *ngFor="let a of (playground$|async);index as x">
-        <td class = "p-20" *ngFor="let i of a;let y = index" (click)="fillBox(x,y)"> {{i}}</td>
+        <td class = "p-20" *ngFor="let i of a;let y = index" (click)="fillBox(x,y)"> {{i | symbol }}</td>
     </tr>
 </table> 
