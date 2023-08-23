@@ -1,0 +1,9 @@
+<p>tick-tac-toe works!</p>
+<h1>Hi... {{data$ | async}}</h1>
+<h1>Playground : {{(playground$|async)?.length}}</h1>
+
+<table border="2">
+    <tr *ngFor="let a of (playground$|async);index as x">
+        <td class = "p-20" *ngFor="let i of a;let y = index" (click)="fillBox(x,y)"> {{i}}</td>
+    </tr>
+</table> 
