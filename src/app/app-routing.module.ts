@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:"tick",
+    path:"",
     loadChildren:()=>
     import('./tick-tac-toe/tick-tac-toe.module').then(m=>m.TickTacToeModule),
   }
