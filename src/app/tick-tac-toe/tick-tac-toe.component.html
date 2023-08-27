@@ -2,8 +2,22 @@
 <h1>Hi... {{data$ | async}}</h1>
 <h1>Playground : {{(playground$|async)?.length}}</h1>
 
+<button mat-raised-button color="accent" (click)="restartGame()">Restart</button>
+
 <table border="2">
     <tr *ngFor="let a of (playground$|async);index as x">
         <td class = "p-20" *ngFor="let i of a;let y = index" (click)="fillBox(x,y)"> {{i | symbol }}</td>
     </tr>
 </table> 
+
+<div class="overlay" *ngIf="popup">
+    <div class="popup">
+        <h2>winner winner Panner dinner</h2>
+        <a class="close" (click)="restartGame()">&times;</a>
+        <div class="content">
+            {{winner$|async}} wins
+
+            <button (click)="restartGame()">Restart</button>
+        </div>
+    </div>
+</div>

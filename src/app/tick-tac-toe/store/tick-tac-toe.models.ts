@@ -8,9 +8,10 @@ export interface TickState{
     isGameOver : boolean;
     turn : number;
     error : number;
+    checkwinStatus:boolean;
 } 
 
 export interface PlaygroundWithError{
-    playgroung:number[][],
+    playground:number[][],
     error:number,
 }
